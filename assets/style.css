@@ -52,3 +52,11 @@ ul {list-style-type: none;
 
 
 }
+
+#footer{
+		padding-top:10px; 
+		padding-bottom:10px;
+		background-color:#99CCFF;
+		clear:both;
+		text-align:center;
+		font-family:"Arial", Helvetica, sans-serif;}

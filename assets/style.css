@@ -2,7 +2,7 @@ body {
 	background-color: #DDFFFF;
 	padding-left:50px; 
 	padding-bottom: 70px;
-	padding-top: 30px;
+	padding-top: 100px;
 }
 
 img {
@@ -44,6 +44,7 @@ div{
 	display: inline;
 }
 
+
 #weathers
 {
 	font-weight:bold;
@@ -52,10 +53,10 @@ div{
 }
 
 
-#objects
+#header
 {
-
-
+	background-color:#ACBFBF;
+	clear:both;
 }
 
 #footer {

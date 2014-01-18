@@ -15,11 +15,15 @@
     </head>
 
     <body>
-        <a class="brand" href="index.html"><img src = "weducate.png"/></a>
-        <div class="row">
+        
+        <div  id="header" class="navbar navbar-fixed-top">
+            <a class="brand" href="index.html"><img src = "weducate.png"/></a>
+            <h5 style = "font-family : Verdana; color : #576d94">Do you know what to wear for different weathers? Try this out and see how you do!</h5>
+        </div>
+        
+        
+        
         <form id="main" ng-app ng-controller="myweathers">
-            <h5 style = "font-family : Verdana; color : #576d94">Do you know what to wear for different weathers? Try this out and see how you do!</h1>
-
             <div id="weathers" class="row">
                 <div class="col-sm-3-offset-6" id="weather" ng-repeat-start="weather in weathers">
                 <p>{{weather.title}}</p>

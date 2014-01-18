@@ -15,15 +15,16 @@
     </head>
 
     <body>
+        <div class="row">
         <img src = "weducate.png"/>
         <form id="main" ng-app ng-controller="myweathers">
             <h1 style = "font-family : Verdana; color : #576d94">Weather Education</h1>
 
-            <div id="weathers">
-                <div id="weather" ng-repeat-start="weather in weathers">
+            <div id="weathers" class="row">
+                <div class="col-sm-3-offset-6" id="weather" ng-repeat-start="weather in weathers">
                 <p>{{weather.title}}</p>
                 </div>
-                <div id="objects" ng-repeat-end>
+                <div class="col-sm-3" id="objects" ng-repeat-end>
                     <div ng-repeat="object in weather.objects">
                         <button value="1" name="{{object.title}}" ng-click="check('{{weather.title}}', '{{object.title}}')"/>
                         {{object.title}}
@@ -38,6 +39,7 @@
             <input type="submit" id="order" value="Order"/>
         -->
         </form>
+    </div>
 
         <!-- The single AngularJS include -->
         <script src="assets/angular.min.js"></script>

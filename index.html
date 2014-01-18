@@ -14,23 +14,28 @@
 
     <body>
 
-        <form id="main" ng-app ng-controller="myservices">
-            <h1>My Services</h1>
+        <form id="main" ng-app ng-controller="myweather">
+            <h1>Weather Education</h1>
 
-            <ul id="services">
+            <ul id="weathers">
                 <!-- The services will be inserted here -->
-                <li ng-repeat="service in services">
+                <li ng-repeat="w in weather">
                     <label>
-                        <input type="checkbox" ng-model="service.selected" value="1" name="{{service.title}}" />
-                        {{service.title}}<span>${{service.price}}</span>
+                        {{w.title}}
                     </label>
+                    <ul id="objects">
+                        <li ng-repeat="o in w.objects">
+                            <input type="checkbox" ng-model="o.selected" value="1" name="{{o.title}}" />
+                            {{o.title}}
+                        </li>
+                    </ul>
                 </li>
             </ul>
-
+            <!--
             <p id="total">total: <span>${{total()}}</span></p>
 
             <input type="submit" id="order" value="Order"/>
-
+        -->
         </form>
 
         <!-- The single AngularJS include -->

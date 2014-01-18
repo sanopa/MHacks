@@ -24,7 +24,7 @@
                 </div>
                 <div id="objects" ng-repeat-end>
                     <div ng-repeat="object in weather.objects">
-                        <button value="1" name="{{object.title}}" ng-click"{{check('{{weather.title}}', '{{object.title}}')}}"/>
+                        <button value="1" name="{{object.title}}" ng-click="check('{{weather.title}}', '{{object.title}}')"/>
                         {{object.title}}
                         </button>
                     </div>

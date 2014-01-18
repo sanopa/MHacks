@@ -27,17 +27,17 @@ function myweathers($scope){
         return t;
     };*/
     $scope.check=function(wt, ot){
-        for(weather in $scope.weathers) {
-            if (weather.title == wt) {
-                for(object in weather.objects) {
-                    if (object.title == ot) {
-                        if (object.val == false) {
+        angular.forEach($scope.weathers, function(w){
+            if (w.title == wt) {
+                angular.forEach(w.objects, function(o){
+                    if (o.title == ot) {
+                        if (o.val == false) {
                             alert("Incorrect");
                         }
                     }
-                }
+                });
             }
-        }
+        });
     }
 }
 /*

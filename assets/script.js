@@ -13,3 +13,27 @@ function myweathers($scope){
         return t;
     };*/
 }
+
+var getUrl = ‘’;
+jQuery(document).ready(function($) {
+  $.ajax({
+  url : "http://api.wunderground.com/api/396bab011405eb77/geolookup/q/autoip.json",
+  dataType : "jsonp",
+  success : function(parsed_json) {
+  var zip = parsed_json[‘zip’];
+  getUrl = “http://api.wunderground.com/api/396bab011405eb77/conditions/q/” + zip + “.json”;
+  }
+  });
+});
+
+jQuery(document).ready(function($) {
+  $.ajax({
+  url : getUrl,
+  dataType : "jsonp",
+  success : function(parsed_json) {
+  var zip = parsed_json[‘zip’];
+  var temp_f = parsed_json['current_observation']['temp_f'];
+  alert("Current temperature in " + location + " is: " + temp_f);    
+  }
+  });
+});

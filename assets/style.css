@@ -1,5 +1,5 @@
 body {
-	background-color: #99CCFF;
+	background-color: #DDFFFF;
 	padding-left:50px; 
 	padding-bottom: 30px;
 	
@@ -7,7 +7,7 @@ body {
 
 head {
 	
-	background-color: #99CCFF;
+	background-color: #DDFFFF;
 	padding-left:50px; 
 	padding-top:30px;
 }
@@ -54,8 +54,8 @@ ul {list-style-type: none;
 }
 
 #footer{
-		padding-top:10px; 
-		padding-bottom:10px;
+		padding-top:5px; 
+		padding-bottom:5px;
 		background-color:#99CCFF;
 		clear:both;
 		text-align:center;

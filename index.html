@@ -30,9 +30,12 @@
                 </div>
                 <div class="col-md-9" id="objects">
                     <ul class="nav nav-pills">
-                        <li ng-repeat="object in weather.objects"><button value="{{object.val}}" name="{{object.title}}" onclick="check(this.value);">
+                        <li ng-repeat="object in weather.objects"><button value="{{object.val}}" name="{{object.title}}+{{weather.title}}" onclick="check(this.value, this.name);">
                         {{object.title}}
                         </button></li>
+                    </ul>
+                    <ul class="nav nav-pills">
+                        <li ng-repeat="object in weather.objects" class="answers-hidden" id="{{object.title}}+{{weather.title}}">Answer</li>
                     </ul>
                 </div>
         </form>
@@ -41,19 +44,20 @@
             Anna Tan, Jenna Choo, Sonya Anopa, Sally McNichols
             </div>
         </div>
-        <script>
-            function check(value) {
-                if (value === "true") {
-                    alert("Good Job");
-                } else {
-                    alert("Incorrect");
-                }
-            }
-        </script>
         <!-- The single AngularJS include -->
         <script src="assets/angular.min.js"></script>
         <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script>-->
         <script src="assets/ui-bootstrap-tpls-0.10.0.min.js"></script>
         <script src="assets/script.js"></script>
+                <script>
+            function check(value, object) {
+                if (value === "true") {
+                    document.getElementById(object).innerHTML = "Good Job!";
+                } else {    
+                    document.getElementById(object).innerHTML = "Try Again";
+                }
+                document.getElementById(object).className = "answers-shown";
+            }
+        </script>
     </body>
 </html>

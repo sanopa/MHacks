@@ -17,19 +17,14 @@
         <form id="main" ng-app ng-controller="myweathers">
             <h1>Weather Education</h1>
 
-            <ul id="weathers">
-                <!-- The services will be inserted here -->
-                <li ng-repeat="weather in weathers">
-                    <label>
-                        {{weather.title}}
-                    </label>
-                    <ul id="objects">
-                        <li ng-repeat="object in weather.objects">
-                            <input type="checkbox" ng-model="object.selected" value="1" name="{{object.title}}" />
-                            {{object.title}}
-                        </li>
-                    </ul>
-                </li>
+            <ul id="weathers" ng-repeat="weather in weathers">
+                <li>{{weather.title}}</li>
+                <ul id="objects">
+                    <li ng-repeat="object in weather.objects">
+                        <input type="checkbox" ng-model="object.selected" value="1" name="{{object.title}}" />
+                        {{object.title}}
+                    </li>
+                </ul>
             </ul>
             <!--
             <p id="total">total: <span>${{total()}}</span></p>

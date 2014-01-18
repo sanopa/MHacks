@@ -2,7 +2,7 @@ body {
 	background-color: #DDFFFF;
 	padding-left:50px; 
 	padding-bottom: 70px;
-	padding-top: 30px;
+	padding-top: 100px;
 }
 
 img {
@@ -48,24 +48,33 @@ div{
 {
 	font-weight:bold;
 	font-size : 20px;
-	display
+	margin-top: 40px;
 }
 
-
-#objects
+#objects ul
 {
+	list-style-type: none;
+}
 
+#objects ul li {
+	display: inline;
+}
 
+#header
+{
+	background-color:#ACBFBF;
+	clear:both;
+	padding-left: 50px;
 }
 
 #footer {
 	height: 5%;
 	padding-top:10px; 
 	padding-bottom: 0px;
-	padding-left: 50px;
-	background-color:#ACBFBF;
+	background-color: #d3dee7;
 	clear:both;
 	text-align:left;
 	font-family:Verdana; 
-	color: #ffffff;
+	color: #48a6a6;
+	border-top: 2px #fff;
 }

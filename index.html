@@ -17,18 +17,16 @@
     <body>
         <div class="container">
             <div class="row navbar navbar-fixed-top" id ="header">
-            <a class="brand" href="index.html"><img src = "weducate.png"/></a>
+            <a class="brand" href="index.html"><img id="brand" src = "weducate.png"/></a>
             <h5 style = "font-family : Verdana; color : #576d94">Do you know what to wear for different weathers? Try this out and see how you do!</h5>
             </div>
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">
-                <div class="col-md-2 col-md-offset-1" id="weather">      
-                
-                <div class="container"> 
-                <p>{{weather.title}}</p>
-                <img src = "{{weather.image}}" width="20" height="20" align="right"/>
+                <div class="col-md-1" id="weather">      
+                <p class="pull-right">{{weather.title}}</p>
                 </div>
-
+                <div class="col-md-1 pull-left">
+                <img src = "{{weather.image}}" width="40" height="40"/>
                 </div>
                 <div class="col-md-9" id="objects">
                     <ul class="nav nav-pills">

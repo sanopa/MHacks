@@ -5,7 +5,7 @@ body {
 	padding-top: 100px;
 }
 
-img {
+#brand {
 	height: 25%;
 	width: 25%;
 }
@@ -34,21 +34,15 @@ ul {list-style-type: none;
 }
 
 button{
-
   display: block;
   font-size : 15px;
-}
-
-div{
-
-	display: inline;
 }
 
 #weathers
 {
 	font-weight:bold;
 	font-size : 20px;
-	margin-top: 40px;
+	margin-top: 80px;
 }
 
 #objects ul
@@ -71,6 +65,7 @@ div{
 	height: 5%;
 	padding-top:10px; 
 	padding-bottom: 0px;
+	padding-left: 50px;
 	background-color: #d3dee7;
 	clear:both;
 	text-align:left;

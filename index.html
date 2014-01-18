@@ -23,8 +23,12 @@
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">
                 <div class="col-md-2 col-md-offset-1" id="weather">      
+                
+                <div class="container"> 
                 <p>{{weather.title}}</p>
-                <!--<img src = "{{weather.image}}" width="50" height="50" />-->
+                <img src = "{{weather.image}}" width="20" height="20" align="right"/>
+                </div>
+
                 </div>
                 <div class="col-md-9" id="objects">
                     <ul class="nav nav-pills">

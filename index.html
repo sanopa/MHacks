@@ -16,13 +16,17 @@
 
     <body>
         <div class="container">
-            <div class="row">
+            <div class="row navbar navbar-fixed-top" id ="header">
             <a class="brand" href="index.html"><img src = "weducate.png"/></a>
             <h5 style = "font-family : Verdana; color : #576d94">Do you know what to wear for different weathers? Try this out and see how you do!</h5>
             </div>
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">
-                <div class="col-md-2 col-md-offset-1" id="weather" >
+                <div class="col-md-2 col-md-offset-1" id="weather">      
+        
+        <form id="main" ng-app ng-controller="myweathers">
+            <div id="weathers" class="row">
+                <div class="col-sm-3-offset-6" id="weather" ng-repeat-start="weather in weathers">
                 <p>{{weather.title}}</p>
                 <!--<img src = "{{weather.image}}" width="50" height="50" />-->
                 </div>

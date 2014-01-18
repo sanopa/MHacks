@@ -1,8 +1,8 @@
 body {
 	background-color: #DDFFFF;
 	padding-left:50px; 
-	padding-bottom: 40px;
-	padding-top: 30px;
+	padding-bottom: 70px;
+	padding-top: 100px;
 }
 
 img {
@@ -39,13 +39,17 @@ button{
   font-size : 15px;
 }
 
+div{
+
+	display: inline;
+}
+
 #weathers
 {
 	font-weight:bold;
 	font-size : 20px;
 	margin-top: 40px;
 }
-
 
 #objects ul
 {
@@ -54,6 +58,13 @@ button{
 
 #objects ul li {
 	display: inline;
+}
+
+#header
+{
+	background-color:#ACBFBF;
+	clear:both;
+	padding-left: 50px;
 }
 
 #footer {

@@ -1,5 +1,5 @@
-function myweather ($scope){
-    $scope.weather =[
+function myweathers ($scope){
+    $scope.weathers =[
         { title: 'rainy', objects=[{title: 'rain coat', val: true}, {title:'snow boots',val:false}, {title:'bathing suit',val:false}, {title:'rain boots',val:true}, {title:'T-shirt',val: false}]},
         { title: 'sunny', objects=[{title:'pajamas',val: false}, {title:'sunglasses',val:true}, {title:'shorts', val:true}, {title:'sneakers',val:true}, {title:'rain boots',val:true}]},
         { title: 'cloudy', objects=[{title:'sunglasses',val: false}, {title:'scarf, hat, and gloves', val:false}, {title:'pants',val:true}, {title:'shorts',val:false}, {title:'bathing suit',val: false}]},

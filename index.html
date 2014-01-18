@@ -18,21 +18,21 @@
         <form id="main" ng-app ng-controller="myweathers">
             <h1 style = "font-family : Verdana; color : #576d94">Weather Education</h1>
 
-            <ul id="weathers">
-                <!-- The services will be inserted here -->
-                <li ng-repeat="weather in weathers">
-                    <label>
-                        {{weather.title}}
-                    </label>
-                    <ul id="objects">
+            <div id="weathers">
+                <div ng-repeat-start="weather in weathers">
+                <p>{{weather.title}}</p>
+                </div>
+                <div id="objects">
+                    <ul>
                         <li ng-repeat="object in weather.objects">
                             <input type="checkbox" ng-model="object.selected" value="1" name="{{object.title}}" />
                             {{object.title}}
                         </li>
-                        <p id="check">checking: {{check(object.title)}}</p>
                     </ul>
-                </li>
-            </ul>
+                </div>
+                <div ng-repeat-end></div>
+                <!--<p id="check" ng-repeat-end>checking: <span>{{check({{weather.title}})}}</span></p>-->
+            </div>
             <!--
             <p id="total">total: <span>${{total()}}</span></p>
 

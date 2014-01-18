@@ -6,8 +6,8 @@ body {
 }
 
 img {
-	height: 15%;
-	width: 15%;
+	height: 20%;
+	width: 20%;
 }
 
 ul li {
@@ -33,12 +33,18 @@ ul {list-style-type: none;
 
 }
 
+<<<<<<< HEAD
 button {
   padding:5px;
   background-color: #dcdcdc;
   border: 1px solid #666;
   color:#000;
   text-decoration:none;
+=======
+button{
+
+  
+>>>>>>> 1f4ae5f9a07a1a84a3e75858ac2616ac70752b4f
 }
 
 

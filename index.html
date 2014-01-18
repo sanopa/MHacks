@@ -23,12 +23,11 @@
                 <p>{{weather.title}}</p>
                 </div>
                 <div id="objects" ng-repeat-end>
-                    <ul>
-                        <li ng-repeat="object in weather.objects">
-                            <!--<input type="checkbox" ng-model="object.selected" value="1" name="{{object.title}}" />-->
-                            {{object.title}}
-                        </li>
-                    </ul>
+                    <div ng-repeat="object in weather.objects">
+                        <button value="1" name="{{object.title}}" ng-click"{{check('{{weather.title}}', '{{object.title}}')}}"/>
+                        {{object.title}}
+                        </button>
+                    </div>
                 </div>
                 <!--<p id="check" ng-repeat-end>checking: <span>{{check({{weather.title}})}}</span></p>-->
             </div>
@@ -40,7 +39,8 @@
         </form>
 
         <!-- The single AngularJS include -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script>
+        <script src="assets/angular.min.js"></script>
+        <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script>-->
         <script src="assets/script.js"></script>
 
     </body>

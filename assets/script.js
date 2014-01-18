@@ -4,9 +4,6 @@ function myweathers($scope){
         { title: 'sunny', objects:[{title:'pajamas',val: false}, {title:'sunglasses',val:true}, {title:'shorts', val:true}, {title:'sneakers',val:true}, {title:'rain boots',val:true}]},
         { title: 'cloudy', objects:[{title:'sunglasses',val: false}, {title:'scarf, hat, and gloves', val:false}, {title:'pants',val:true}, {title:'shorts',val:false}, {title:'bathing suit',val: false}]},
         { title: 'snowy', objects:[{title: 'bathing suit', val:false},{title:'snow boots',val: true}, {title:'coat',val: true}, {title:'pants', val: true}, {title:'scarf, hat, and gloves',val: true}]}];
-    $scope.check=function(){
-        
-    }
     // $scope.check=function(t){
     //     angular.forEach($score.weathers, function(w){
     //         if(w.title == t) {
@@ -29,6 +26,19 @@ function myweathers($scope){
         });
         return t;
     };*/
+    $scope.check=function(wt, ot){
+        for(weather in $scope.weathers) {
+            if (weather.title == wt) {
+                for(object in weather.objects) {
+                    if (object.title == ot) {
+                        if (object.val == false) {
+                            alert("Incorrect");
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 /*
 var getUrl = ‘’;

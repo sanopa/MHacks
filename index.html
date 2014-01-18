@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-sm-3" id="objects" ng-repeat-end>
                     <div ng-repeat="object in weather.objects">
-                        <button value="1" name="{{object.title}}" ng-click="check({{object.val}})">
+                        <button value="{{object.val}}" name="{{object.title}}" onclick="if(!this.val) alert('Incorrect');">
                         {{object.title}}
                         </button>
                     </div>

@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-sm-3" id="objects" ng-repeat-end>
                     <div ng-repeat="object in weather.objects">
-                        <button value="{{object.val}}" name="{{object.title}}" onclick="if(!this.value) {alert('Incorrect');}">
+                        <button value="{{object.val}}" name="{{object.title}}" onclick="check(this.value);">
                         {{object.title}}
                         </button>
                     </div>
@@ -40,7 +40,15 @@
         -->
         </form>
     </div>
-
+        <script>
+            function check(value) {
+                if (value === "true") {
+                    alert("Good Job");
+                } else {
+                    alert("Incorrect");
+                }
+            }
+        </script>
         <!-- The single AngularJS include -->
         <script src="assets/angular.min.js"></script>
         <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script>-->

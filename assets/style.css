@@ -39,3 +39,24 @@ li {
 ul {list-style-type: none;
 
 }
+
+#weathers
+{
+	font-weight:bold;
+}
+
+
+
+#objects
+{
+
+
+}
+
+#footer{
+		padding-top:10px; 
+		padding-bottom:10px;
+		background-color:#99CCFF;
+		clear:both;
+		text-align:center;
+		font-family:"Arial", Helvetica, sans-serif;}

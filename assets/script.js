@@ -6,8 +6,4 @@ function myweathers($scope){
         { title: 'snowy', image:"assets/images/snowy.png", objects:[{title: 'bathing suit', val:false, image:"assets/images/swimsuit.png"},{title:'gloves',val: true, image:"assets/images/mittens-purple.png"}, {title:'coat',val: true}, {title:'pants', val: true, image:"assets/images/trousers.png"}, {title:'scarf',val: true, image:"assets/images/scarf.png"}]}];
    
 }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 30c5388e8eadaa31799d69a81a3b225b74595ddd

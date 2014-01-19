@@ -10,8 +10,8 @@ body {
 
 
 #brand {
-	height: 25%;
-	width: 25%;
+	height: 50%;
+	width: 50%;
 }
 
 #demo
@@ -72,7 +72,7 @@ button{
 
 #objects ul li {
 	display: inline;
-	padding: 20px;
+	padding: 40px;
 }
 
 .answers-hidden {
@@ -106,6 +106,7 @@ button{
 }
 */
 h5 {
+	font-family: 'Averia Sans Libre', cursive;
 position: relative;
 	width: 100%;
 	font-size: 1.5em;

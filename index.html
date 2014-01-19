@@ -17,15 +17,20 @@
             <div class="row">
                 <div class="navbar navbar-fixed-top" id ="header">
                     <div class="col-md-8 col-md-offset-1">
+                        <div class="row">
+                            <div class="col-md-6">
                     <a class="brand" href="index.html"><img id="brand" src = "weducate.png"/></a>
-                    <h5>Do you know what to wear for different weathers? Try this out and see how you do! Click on the appropriate clothes for each weather condition.</h5>
-                    </div>
-                    <div class="col-md-3 pull-right">
-                        <span id="demo" class="col-tp-1 pull-right"></span>
+                        </div>
+                        <div class="col-md-6 pull-right">
+                            <span id="demo" class="col-tp-1"></span>
                         <br>
                         <span id="dog" class="col-tp-1"></span>
                         <br>
                         <span id="weatheradvice" class="col-tp-1"></span>
+                    </div>
+                    <div class="row">
+                        <h5>Do you know what to wear for different weathers? Try this out and see how you do! Click on the appropriate clothes for each weather condition.</h5>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -38,7 +43,7 @@
                 <div class="col-md-1 pull-left">
                 <img src = "{{weather.image}}" width="50" height="50"/>
                 </div>
-                <div class="col-md-8" id="objects">
+                <div class="col-md-5" id="objects">
                     <ul class="nav nav-pills">
                         <li class="col-md-1" ng-repeat="object in weather.objects"><img src="{{object.image}}" value="{{object.val}}" name="{{weather.title}}" onclick="check(this.value, this.name);" width="50" height="50" title="{{object.title}}"/></li>
                     </ul>

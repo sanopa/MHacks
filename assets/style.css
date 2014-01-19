@@ -14,6 +14,11 @@ body {
 	width: 50%;
 }
 
+#demo, #dog, #weatheradvice {
+	font-size: 18px;
+	color: #48a6a6;
+}
+
 #demo
 {
 	padding-right:50px;
@@ -62,7 +67,7 @@ button{
 {
 	font-weight:bold;
 	font-size : 20px;
-	margin-top: 80px;
+	margin-top: 110px;
 }
 
 #objects ul
@@ -72,7 +77,9 @@ button{
 
 #objects ul li {
 	display: inline;
-	padding: 40px;
+	margin: 10px 15px 10px 15px;
+	width: 90px;
+	height: 70px;
 }
 
 .answers-hidden {
@@ -92,7 +99,7 @@ button{
 	padding-left: 50px;*/
 }
 
-/*.top-to-bottom {
+.top-to-bottom {
 	border: 10px;
     border-width:3px;
     -webkit-border-image: 
@@ -104,7 +111,11 @@ button{
     -moz-border-image:
     	   -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
 }
-*/
+
+.row .ribbon {
+	padding-top: 8%;
+}
+
 h5 {
 	font-family: 'Averia Sans Libre', cursive;
 position: relative;
@@ -135,6 +146,7 @@ h5:after
 
 #footer {
 	height: auto;
+	margin-top: 10px;
 	padding-top:10px; 
 	padding-bottom: 10px;
 	padding-left: 50px;
@@ -144,5 +156,7 @@ h5:after
 	text-align:left;
 	font-family: 'Averia Sans Libre', cursive;
 	color: #48a6a6;
-	border-top: 2px #fff;
+	-webkit-box-shadow: 0px 2px 4px #888;
+	-moz-box-shadow: 0px 2px 4px #888;
+	box-shadow: 0px 2px 4px #888;
 }

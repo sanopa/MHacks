@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8"/>
-        <title>Weducate</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap -->
-        <link href="assets/bootstrap.css" rel="stylesheet">
-        <!-- The main CSS file -->
-        <link href="assets/style.css" rel="stylesheet" />
+<head>
+    <meta charset="utf-8"/>
+    <title>Weducate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap.css" rel="stylesheet">
+    <!-- The main CSS file -->
+    <link href="assets/style.css" rel="stylesheet" />
 
-    </head>
+</head>
 
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="navbar navbar-fixed-top" id ="header">
-                    <div class="col-md-8 col-md-offset-1">
-                        <div class="row">
-                            <div class="col-md-6">
-                    <a class="brand" href="index.html"><img id="brand" src = "weducate.png"/></a>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="navbar navbar-fixed-top" id ="header">
+                <div class="col-md-9 col-md-offset-1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="brand" href="index.html"><img id="brand" src = "weducate.png"/></a>
                         </div>
                         <div class="col-md-6 pull-right">
                             <span id="demo" class="col-tp-1"></span>
-                        <br>
-                        <span id="dog" class="col-tp-1"></span>
-                        <br>
-                        <span id="weatheradvice" class="col-tp-1"></span>
-                    </div>
-                    <div class="row">
-                        <h5>Do you know what to wear for different weathers? Try this out and see how you do! Click on the appropriate clothes for each weather condition.</h5>
-                    </div>
+                            <br>
+                            <span id="dog" class="col-tp-1"></span>
+                            <br>
+                            <span id="weatheradvice" class="col-tp-1"></span>
+                        </div>
+                        <div class="row ribbon">
+                            <h5>Do you know what to wear for different weathers? Try this out and see how you do! Click on the appropriate clothes for each weather condition.</h5>
+                        </div>
                     </div>
                 </div>
             </div>
-        <hr style="width: 1px; height: 20px; display: inline; border: 10px;">
+        </div>
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">
                 <div class="col-md-1" id="weather">      
-                <p>{{weather.title}}</p>
+                    <p>{{weather.title}}</p>
                 </div>
                 <div class="col-md-1 pull-left">
-                <img src = "{{weather.image}}" width="50" height="50"/>
+                    <img src = "{{weather.image}}" width="50" height="50"/>
                 </div>
                 <div class="col-md-5" id="objects">
                     <ul class="nav nav-pills">
-                        <li class="col-md-1" ng-repeat="object in weather.objects"><img src="{{object.image}}" value="{{object.val}}" name="{{weather.title}}" onclick="check(this.value, this.name);" width="50" height="50" title="{{object.title}}"/></li>
+                        <li class="col-md-1" ng-repeat="object in weather.objects"><img src="{{object.image}}" value="{{object.val}}" name="{{weather.title}}" onclick="check(this.value, this.name);" width="70" height="70" title="{{object.title}}"/></li>
                     </ul>
                 </div>
                 <div class="col-md-2" id="answers">
-                    <label class="answers-hidden" id="afield+{{weather.title}}">Answer</label>
+                    <img class="answers-hidden" id="afield+{{weather.title}}" src=""/>
                 </div>
-        </form>
-        </div>
-        <div class="row">
-        <form action="index.html">
-            <button class="pull-right">Reset</button>
-        </form>
-        </div>
-            <div id="footer" class="navbar navbar-fixed-bottom pull-left">
-            Anna Tan, Jenna Choo, Sonya Anopa, Sally McNichols
-
-             <span style="float:right;">Weather by: <a href="http://www.wunderground.com"><img src="assets/images/wunderground.png" width="220" height="30" style="vertical-align:bottom"></a></span>
-
             </div>
+        </form>
+        <div class="navbar navbar-fixed-bottom pull-left">
+            <div class="row">
+                <div class="col-md-1 col-md-offset-9">
+                    <form action="index.html">
+                        <button class="pull-right">Reset</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" id="footer">
+                Anna Tan, Jenna Choo, Sonya Anopa, Sally McNichols
 
+                <span style="float:right;">Weather by: <a href="http://www.wunderground.com"><img src="assets/images/wunderground.png" width="220" height="30" style="vertical-align:bottom"></a></span>
+            </div>
         </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script>var j = jQuery.noConflict();</script>
-        <!-- The single AngularJS include -->
-        <script src="assets/angular.min.js"></script>
-        <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script>-->
-        <script src="assets/ui-bootstrap-tpls-0.10.0.min.js"></script>
-        <script src="assets/script.js"></script>
+    </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>var j = jQuery.noConflict();</script>
+<!-- The single AngularJS include -->
+<script src="assets/angular.min.js"></script>
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script>-->
+<script src="assets/ui-bootstrap-tpls-0.10.0.min.js"></script>
+<script src="assets/script.js"></script>
 
-        
-    
-    
 
-    <script>
-    j(document).ready(function(j) {
+
+
+
+<script>
+j(document).ready(function(j) {
     j.ajax({
         url : "http://api.wunderground.com/api/396bab011405eb77/conditions/q/autoip.json",
         dataType : "jsonp",
         success : function(parsed_json) {
-        var location = parsed_json['current_observation']['display_location']['full'];
-        var temp_f = parsed_json['current_observation']['temp_f'];
+            var location = parsed_json['current_observation']['display_location']['full'];
+            var temp_f = parsed_json['current_observation']['temp_f'];
 
-        var weath="Current temperature in ".concat(location, " is ",temp_f," degrees fahrenheit.");
-        document.getElementById("demo").innerHTML=weath;
+            var weath="Current temperature in ".concat(location, " is ",temp_f," degrees fahrenheit.");
+            document.getElementById("demo").innerHTML=weath;
         }
-        });
-        });
+    });
+});
 
-    </script>
+</script>
 
 
-    <script>
-    j(document).ready(function(j) {
+<script>
+j(document).ready(function(j) {
     j.ajax({
         url : "http://api.wunderground.com/api/396bab011405eb77/forecast/q/autoip.json",
         dataType : "jsonp",
@@ -260,7 +262,7 @@
                 document.getElementById("weatheradvice").innerHTML="We recommend wearing a warm jacket and carrying an umbrella tomorrow.";
                 break;
             }
-        
+
             case "Clear":
             {
                 document.getElementById("weatheradvice").innerHTML="We recommend wearing whatever you want tomorrow.";
@@ -298,23 +300,24 @@
 
         }
 
-        }
-        });
-        });
+    }
+});
+});
 
-    </script>
+</script>
 
-        <script>
-    function check(value, weather) {
-        document.getElementById("afield+" + weather).className = "answers-hidden";
-        if (value === "true") {
-            document.getElementById("afield+" + weather).innerHTML = "Good Job :)";
-        } else {    
-            document.getElementById("afield+" + weather).innerHTML = "Try Again :(";
-        }
-        document.getElementById("afield+" + weather).className = "answers-shown";
-        }
-        </script>
+<script>
+function check(value, weather) {
+    document.getElementById("afield+" + weather).className = "answers-hidden";
+    document.getElementById("afield+" + weather).src = "";
+    if (value === "true") {
+        document.getElementById("afield+" + weather).src = "assets/images/sen_girl.png";
+} else {    
+    document.getElementById("afield+" + weather).src = "assets/images/sen_girl_sad.png";
+}
+document.getElementById("afield+" + weather).className = "answers-shown";
+}
+</script>
 
-    </body>
+</body>
 </html>

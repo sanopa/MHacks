@@ -55,6 +55,8 @@
 
         
     
+    <p id="demo">Weather</p>
+
     <script>
     j(document).ready(function(j) {
     j.ajax({
@@ -65,11 +67,14 @@
         var temp_f = parsed_json['current_observation']['temp_f'];
 
         var weath="Current temperature in ".concat(location, "is ",temp_f);
-        alert("Current temperature in " + location + " is: " + temp_f);
+        document.getElementById("demo").innerHTML=weath
         }
         });
         });
+
     </script>
+
+
         <script>
     function check(value, weather) {
         document.getElementById("afield+" + weather).className = "answers-hidden";

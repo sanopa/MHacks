@@ -30,13 +30,11 @@
                 </div>
                 <div class="col-md-9" id="objects">
                     <ul class="nav nav-pills">
-                        <li ng-repeat="object in weather.objects"><button value="{{object.val}}" name="{{object.title}}+{{weather.title}}" onclick="check(this.value, this.name);">
-                        {{object.title}}
-                        </button></li>
+                        <li class="col-md-1" ng-repeat="object in weather.objects"><img src="{{object.image}}" value="{{object.val}}" name="{{weather.title}}" onclick="check(this.value, this.name);" width="40" height="40"/></li>
                     </ul>
-                    <ul class="nav nav-pills">
-                        <li ng-repeat="object in weather.objects" class="answers-hidden" id="{{object.title}}+{{weather.title}}">Answer</li>
-                    </ul>
+                </div>
+                <div class="col-md-1" id="answers">
+                    <label class="answers-hidden" id="afield+{{weather.title}}">Answer</label>
                 </div>
         </form>
         </div>
@@ -53,8 +51,9 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     
     <script>
-    jQuery(document).ready(function($) {
-    $.ajax({
+    jQuery.noConflict();
+    jQuery(document).ready(function(jQuery) {
+    jQuery.ajax({
         url : "http://api.wunderground.com/api/396bab011405eb77/conditions/q/autoip.json",
         dataType : "jsonp",
         success : function(parsed_json) {
@@ -68,13 +67,14 @@
         });
     </script>
         <script>
-    function check(value, object) {
+    function check(value, weather) {
+        document.getElementById("afield+" + weather).className = "answers-hidden";
         if (value === "true") {
-            document.getElementById(object).innerHTML = "Good Job!";
+            document.getElementById("afield+" + weather).innerHTML = "Good Job!";
         } else {    
-            document.getElementById(object).innerHTML = "Try Again";
+            document.getElementById("afield+" + weather).innerHTML = "Try Again";
         }
-        document.getElementById(object).className = "answers-shown";
+        document.getElementById("afield+" + weather).className = "answers-shown";
         }
         </script>
 

@@ -55,14 +55,14 @@ button{
 
 #objects ul li {
 	display: inline;
+	padding: 20px;
 }
 
-ul li.answers-hidden {
+.answers-hidden {
 	visibility: hidden;
-	font-size: 12px;
 }
 
-ul li.answers-shows {
+.answers-shows {
 	visibility: visible;
 	font-size: 10px;
 }

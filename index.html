@@ -20,6 +20,8 @@
             <span id="demo" class="col-tp-1 pull-right"></span>
             <br>
             <span id="dog" class="col-tp-1 pull-right"></span>
+            <br>
+            <span id="weatheradvice" class="col-tp-1 pull-right"></span>
             </div>
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">
@@ -93,6 +95,197 @@
 
         var tomweath="Tomorrow's condition will be ".concat(conditions, ".   ");
         document.getElementById("dog").innerHTML=tomweath;
+
+        switch(conditions)
+        {
+            case "Light Drizzle":
+            case "Heavy Drizzle":
+            case "Drizzle":
+            case "Light Rain":
+            case "Heavy Rain":
+            case "Rain":
+            case "Heavy Spray":
+            case "Light Spray":
+            case "Spray":
+            case "Heavy Rain Mist":
+            case "Light Rain Mist":
+            case "Rain Mist":
+            case "Heavy Rain Showers":
+            case "Light Rain Showers":
+            case "Rain Showers":
+            case "Heavy Thunderstorm":
+            case "Light Thunderstorm":
+            case "Thunderstorm":
+            case "Heavy Thunderstorm and Rain":
+            case "Light Thunderstorm and Rain":
+            case "Thunderstorm and Rain":
+            {
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing a rain jacket or carrying an umbrella tomorrow.";
+                break;                
+            }
+            case "Light Snow":
+            case "Heavy Snow":
+            case "Snow":
+            case "Light Snow Grains":
+            case "Heavy Snow Grains":
+            case "Snow Grains":
+            case "Heavy Ice Crystals":
+            case "Light Ice Crystals":
+            case "Ice Crystals":
+            case "Heavy Ice Pellets":
+            case "Light Ice Pellets":
+            case "Ice Pellets":
+            case "Heavy Low Drifting Snow":
+            case "Light Low Drifting Snow":
+            case "Low Drifting Snow":
+            case "Heavy Blowing Snow":
+            case "Light Blowing Snow":
+            case "Blowing Snow":
+            case "Heavy Snow Showers":
+            case "Light Snow Showers":
+            case "Snow Showers":
+            case "Heavy Snow Blowing Snow Mist":
+            case "Light Snow Blowing Snow Mist":
+            case "Snow Blowing Snow Mist":
+            case "Heavy Ice Pellet Showers":
+            case "Light Ice Pellet Showers":
+            case "Ice Pellet Showers":
+            case "Heavy Hail Showers":
+            case "Light Hail Showers":
+            case "Hail Showers":
+            case "Heavy Small Hail Showers":
+            case "Light Small Hail Showers":
+            case "Small Hail Showers":
+            case "Heavy Thunderstorms and Snow":
+            case "Light Thunderstorms and Snow":
+            case "Thunderstorms and Snow":
+            case "Heavy Thunderstorms and Ice Pellets":
+            case "Light Thunderstorms and Ice Pellets":
+            case "Thunderstorms and Ice Pellets":
+            case "Heavy Thunderstorms with Hail":
+            case "Light Thunderstorms with Hail":
+            case "Thunderstorms with Hail":
+            case "Heavy Thunderstorms with Small Hail":
+            case "Light Thunderstorms with Small Hail":
+            case "Thunderstorms with Small Hail":
+            case "Small Hail":
+            {
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing a winter jacket tomorrow.";
+                break;
+            }
+            case "Heavy Mist":
+            case "Light Mist":
+            case "Mist":
+            case "Heavy Fog":
+            case "Light Fog":
+            case "Fog":
+            case "Heavy Fog Patches":
+            case "Light Fog Patches":
+            case "Fog Patches":
+            {
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing a rain jacket or carrying an umbrella tomorrow. Be carful when out and about in case there is limited visibility!";
+                break;
+            }
+            case "Heavy Smoke":
+            case "Light Smoke":
+            case "Smoke":
+            case "Heavy Volcanic Ash":
+            case "Light Volcanic Ash":
+            case "Volcanic Ash":
+            {
+
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing protective gear tomorrow. Stay away from burning things!";
+                break;
+            }
+            case "Heavy Widespread Dust":
+            case "Light Widespread Dust":
+            case "Widespread Dust":
+            case "Heavy Sand":
+            case "Light Sand":
+            case "Sand":           
+            case "Heavy Dust Whirls":
+            case "Light Dust Whirls":
+            case "Dust Whirls":
+            case "Heavy Low Drifting Widespread Dust":
+            case "Light Low Drifting Widespread Dust":
+            case "Low Drifting Widespread Dust":
+            case "Heavy Low Drifting Sand":
+            case "Light Low Drifting Sand":
+            case "Low Drifting Sand":
+            case "Heavy Blowing Widespread Dust":
+            case "Light Blowing Widespread Dust":
+            case "Blowing Widespread Dust":
+            case "Heavy Blowing Sand":
+            case "Light Blowing Sand":
+            case "Blowing Sand":
+            {
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing a mask or something tomorrow. Be careful of small particles flying around!.";
+                break;
+            }
+            case "Heavy Haze":
+            case "Light Haze":
+            case "Haze":
+            case "Heavy Freezing Fog":
+            case "Light Freezing Fog":
+            case "Freezing Fog":
+            case "Patches of Fog":
+            case "Shallow Fog":
+            case "Partial Fog":
+            case "Overcast":
+            {
+
+                document.getElementById("weatheradvice").innerHTML="We recommend bringing a flash light with you tomorrow so you can see! You might want to wear a coat too.";
+                break;
+            }
+            case "Heavy Freezing Drizzle":
+            case "Light Freezing Drizzle":
+            case "Freezing Drizzle":
+            case "Heavy Freezing Rain":
+            case "Light Freezing Rain":
+            case "Freezing Rain":
+            {
+
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing a warm jacket and carrying an umbrella tomorrow.";
+                break;
+            }
+        
+            case "Clear":
+            {
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing whatever you want tomorrow.";
+                break;
+            }
+
+            case "Partly Cloudy":
+            case "Mostly Cloudy":
+            case "Scattered Clouds":
+            {
+                document.getElementById("weatheradvice").innerHTML="We recommend dressing a little warmer than usually tomorrow as it will be cloudy.";
+                break;
+            }
+            
+            case "Squalls":
+            {
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing a jacket and carrying an umbrella tomorrow in case of rain.";
+                break;
+            }
+            case "Funnel Cloud":
+            {
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing a warm jacket and carrying an umbrella tomorrow. Be careful of the wind!";
+                break;
+            }
+            case "Unknown Precipitation":
+            {
+                document.getElementById("weatheradvice").innerHTML="We recommend wearing a jacket and carrying an umbrella tomorrow. It may rain, snow, or hail.";
+                break;
+            }
+            case "Unknown":
+            {
+                document.getElementById("weatheradvice").innerHTML="Prepare for the unexpected tomorrow!";
+                break;
+            }
+
+        }
+
         }
         });
         });

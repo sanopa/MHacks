@@ -14,14 +14,20 @@
 
     <body>
         <div class="container">
-            <div class="row navbar navbar-fixed-top" id ="header">
-            <a class="brand" href="index.html"><img id="brand" src = "weducate.png"/></a>
-            <h5>Do you know what to wear for different weathers? Try this out and see how you do!</h5>
-            <span id="demo" class="col-tp-1 pull-right"></span>
-            <br>
-            <span id="dog" class="col-tp-1 pull-right"></span>
-            <br>
-            <span id="weatheradvice" class="col-tp-1 pull-right"></span>
+            <div class="row">
+                <div class="navbar navbar-fixed-top" id ="header">
+                    <div class="col-md-9">
+                    <a class="brand" href="index.html"><img id="brand" src = "weducate.png"/></a>
+                    <h5>Do you know what to wear for different weathers? Try this out and see how you do!</h5>
+                    </div>
+                    <div class="col-md-3 pull-right">
+                        <span id="demo" class="col-tp-1 pull-right"></span>
+                        <br>
+                        <span id="dog" class="col-tp-1 pull-right"></span>
+                        <br>
+                        <span id="weatheradvice" class="col-tp-1 pull-right"></span>
+                    </div>
+                </div>
             </div>
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">

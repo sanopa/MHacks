@@ -17,7 +17,9 @@
             <div class="row navbar navbar-fixed-top" id ="header">
             <a class="brand" href="index.html"><img id="brand" src = "weducate.png"/></a>
             <h5>Do you know what to wear for different weathers? Try this out and see how you do!</h5>
-            <p id="demo" class="col-tp-1 pull-right"></p>
+            <span id="demo" class="col-tp-1 pull-right"></span>
+            <br>
+            <span id="dog" class="col-tp-1 pull-right"></span>
             </div>
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">
@@ -69,6 +71,24 @@
 
         var weath="Current temperature in ".concat(location, " is ",temp_f," degrees fahrenheit.");
         document.getElementById("demo").innerHTML=weath;
+        }
+        });
+        });
+
+    </script>
+
+
+    <script>
+    j(document).ready(function(j) {
+    j.ajax({
+        url : "http://api.wunderground.com/api/396bab011405eb77/forecast/q/autoip.json",
+        dataType : "jsonp",
+        success : function(parsed_json) {
+        //var loc = parsed_json['current_observation']['display_location']['full'];
+        var conditions = parsed_json['forecast']['simpleforecast']['forecastday'][1]['conditions'];
+
+        var tomweath="Tomorrow's condition will be ".concat(conditions, ".   ");
+        document.getElementById("dog").innerHTML=tomweath;
         }
         });
         });

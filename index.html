@@ -23,9 +23,9 @@
                     <div class="col-md-3 pull-right">
                         <span id="demo" class="col-tp-1 pull-right"></span>
                         <br>
-                        <span id="dog" class="col-tp-1 pull-right"></span>
+                        <span id="dog" class="col-tp-1"></span>
                         <br>
-                        <span id="weatheradvice" class="col-tp-1 pull-right"></span>
+                        <span id="weatheradvice" class="col-tp-1"></span>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <div id="footer" class="navbar navbar-fixed-bottom pull-left">
             Anna Tan, Jenna Choo, Sonya Anopa, Sally McNichols
 
-             <a href="http://www.wunderground.com"><img src="assets/images/wunderground.png" width="220" height="30" align="right"></a>
+             <span style="float:right;">Weather by: <a href="http://www.wunderground.com"><img src="assets/images/wunderground.png" width="220" height="30"></a></span>
 
             </div>
 
@@ -100,7 +100,7 @@
         //var loc = parsed_json['current_observation']['display_location']['full'];
         var conditions = parsed_json['forecast']['simpleforecast']['forecastday'][1]['conditions'];
 
-        var tomweath="Tomorrow's condition will be ".concat(conditions, ".   ");
+        var tomweath="Tomorrow's condition will be ".concat(conditions, ".");
         document.getElementById("dog").innerHTML=tomweath;
 
         switch(conditions)

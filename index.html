@@ -66,7 +66,7 @@
         var location = parsed_json['current_observation']['display_location']['full'];
         var temp_f = parsed_json['current_observation']['temp_f'];
 
-        var weath="Current temperature in ".concat(location, "is ",temp_f);
+        var weath="Current temperature in ".concat(location, " is ",temp_f);
         document.getElementById("demo").innerHTML=weath
         }
         });

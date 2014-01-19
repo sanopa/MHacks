@@ -35,11 +35,11 @@
                 <p>{{weather.title}}</p>
                 </div>
                 <div class="col-md-1 pull-left">
-                <img src = "{{weather.image}}" width="40" height="40"/>
+                <img src = "{{weather.image}}" width="50" height="50"/>
                 </div>
                 <div class="col-md-8" id="objects">
                     <ul class="nav nav-pills">
-                        <li class="col-md-1" ng-repeat="object in weather.objects"><img src="{{object.image}}" value="{{object.val}}" name="{{weather.title}}" onclick="check(this.value, this.name);" width="40" height="40"/></li>
+                        <li class="col-md-1" ng-repeat="object in weather.objects"><img src="{{object.image}}" value="{{object.val}}" name="{{weather.title}}" onclick="check(this.value, this.name);" width="50" height="50" title="{{object.title}}"/></li>
                     </ul>
                 </div>
                 <div class="col-md-2" id="answers">

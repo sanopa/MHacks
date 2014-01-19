@@ -86,9 +86,50 @@ button{
 
 #header
 {
-	background-color:#d3dee7;
-	clear:both;
-	padding-left: 50px;
+	padding-top: 30px;
+	background-color:#DDFFFF;
+	/*clear:both;
+	padding-left: 50px;*/
+}
+
+/*.top-to-bottom {
+	border: 10px;
+    border-width:3px;
+    -webkit-border-image: 
+    	-webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: 
+    	-webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    -o-border-image:
+    	     -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image:
+    	   -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
+}
+*/
+h5 {
+position: relative;
+	width: 100%;
+	font-size: 1.5em;
+	padding: 6px 20px 6px 70px;
+	margin: 30px 10px 10px -70px;
+	color: #555;
+	background-color: #d3dee7;
+	text-shadow: 0px 1px 2px #bbb;
+	-webkit-box-shadow: 0px 2px 4px #888;
+	-moz-box-shadow: 0px 2px 4px #888;
+	box-shadow: 0px 2px 4px #888;
+}
+
+h5:after
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #666 #666 transparent transparent;
 }
 
 #footer {

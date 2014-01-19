@@ -23,7 +23,7 @@
                     <div class="col-md-3 pull-right">
                         <span id="demo" class="col-tp-1 pull-right"></span>
                         <br>
-                        <span id="dog" class="col-tp-1 pull-right"></span>
+                        <span id="dog" class="col-tp-1"></span>
                         <br>
                         <span id="weatheradvice" class="col-tp-1 pull-right"></span>
                     </div>
@@ -99,7 +99,7 @@
         //var loc = parsed_json['current_observation']['display_location']['full'];
         var conditions = parsed_json['forecast']['simpleforecast']['forecastday'][1]['conditions'];
 
-        var tomweath="Tomorrow's condition will be ".concat(conditions, ".   ");
+        var tomweath="Tomorrow's condition will be ".concat(conditions, ".");
         document.getElementById("dog").innerHTML=tomweath;
 
         switch(conditions)

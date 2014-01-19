@@ -17,6 +17,7 @@
             <div class="row navbar navbar-fixed-top" id ="header">
             <a class="brand" href="index.html"><img id="brand" src = "weducate.png"/></a>
             <h5>Do you know what to wear for different weathers? Try this out and see how you do!</h5>
+            <p id="demo" class="col-tp-1 pull-right"></p>
             </div>
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">
@@ -55,7 +56,7 @@
 
         
     
-    <p id="demo">Weather</p>
+    
 
     <script>
     j(document).ready(function(j) {
@@ -66,7 +67,7 @@
         var location = parsed_json['current_observation']['display_location']['full'];
         var temp_f = parsed_json['current_observation']['temp_f'];
 
-        var weath="Current temperature in ".concat(location, " is ",temp_f);
+        var weath="Current temperature in ".concat(location, " is ",temp_f," degrees fahrenheit.");
         document.getElementById("demo").innerHTML=weath;
         }
         });

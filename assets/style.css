@@ -13,6 +13,11 @@ body {
 	width: 25%;
 }
 
+#demo
+{
+	padding-right:50px;
+
+}
 /*ul li {
 	font-family: Verdana; 
 	font-size:23px;

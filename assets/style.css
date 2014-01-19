@@ -88,8 +88,9 @@ button{
 #footer {
 	height: 5%;
 	padding-top:10px; 
-	padding-bottom: 0px;
+	padding-bottom: 30px;
 	padding-left: 50px;
+	padding-right:50px;
 	background-color: #d3dee7;
 	clear:both;
 	text-align:left;

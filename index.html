@@ -24,7 +24,7 @@
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">
                 <div class="col-md-1" id="weather">      
-                <p class="pull-right">{{weather.title}}</p>
+                <p>{{weather.title}}</p>
                 </div>
                 <div class="col-md-1 pull-left">
                 <img src = "{{weather.image}}" width="40" height="40"/>
@@ -94,7 +94,6 @@
         });
 
     </script>
-
 
         <script>
     function check(value, weather) {

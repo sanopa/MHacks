@@ -5,3 +5,8 @@ function myweathers($scope){
         { title: 'cloudy', image:"assets/images/cloudy.png", objects:[{title:'sunglasses',val: false, image:"assets/images/sunglasses.png"}, {title:'scarf', val:false, image:"assets/images/scarf.png"}, {title:'pants',val:true, image:"assets/images/trousers.png"}, {title:'shorts',val:false, image:"assets/images/white-shorts-md.png"}, {title:'bathing suit',val: false, image:"assets/images/swimsuit.png"}]},
         { title: 'snowy', image:"assets/images/snowy.png", objects:[{title: 'bathing suit', val:false, image:"assets/images/swimsuit.png"},{title:'gloves',val: true, image:"assets/images/mittens-purple.png"}, {title:'coat',val: true, image:"assets/images/jacket.png"}, {title:'pants', val: true, image:"assets/images/trousers.png"}, {title:'scarf',val: true, image:"assets/images/scarf.png"}]}];  
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 30c5388e8eadaa31799d69a81a3b225b74595ddd

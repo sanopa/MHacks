@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="navbar navbar-fixed-top" id ="header">
-                <div class="col-md-9 col-md-offset-1">
+                <div class="col-md-9 col-md-offset-2">
                     <div class="row">
                         <div class="col-md-6">
                             <a class="brand" href="index.html"><img id="brand" src = "weducate.png"/></a>
@@ -31,13 +31,20 @@
                         <div class="row ribbon">
                             <h5>Do you know what to wear for different weathers? Try this out and see how you do! Click on the appropriate clothes for each weather condition.</h5>
                         </div>
+                        <div class="row">
+                            <div class="col-md-1 col-md-offset-10">
+                                <form action="index.html">
+                                    <button type="button" class="pull-right btn btn-default">Reset</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <form id="main" ng-app ng-controller="myweathers">
             <div id="weathers" class="row" ng-repeat="weather in weathers">
-                <div class="col-md-1" id="weather">      
+                <div class="col-md-1 col-md-offset-1" id="weather">      
                     <p>{{weather.title}}</p>
                 </div>
                 <div class="col-md-1 pull-left">
@@ -53,18 +60,14 @@
                 </div>
             </div>
         </form>
-        <div class="navbar navbar-fixed-bottom pull-left">
+        <div class="navbar navbar-fixed-bottom" id="footer">
             <div class="row">
-                <div class="col-md-1 col-md-offset-9">
-                    <form action="index.html">
-                        <button class="pull-right">Reset</button>
-                    </form>
+                <div class="col-md-7 col-md-offset-2" style="vertical-align: bottom; padding: 5px;">
+                    Anna Tan, Jenna Choo, Sonya Anopa, Sally McNichols
                 </div>
-            </div>
-            <div class="row" id="footer">
-                Anna Tan, Jenna Choo, Sonya Anopa, Sally McNichols
-
-                <span style="float:right;">Weather by: <a href="http://www.wunderground.com"><img src="assets/images/wunderground.png" width="220" height="30" style="vertical-align:bottom"></a></span>
+                <div class="col-md-3 pull-right" style="display: inline;">
+                    <span>Weather by: <a href="http://www.wunderground.com"><img src="assets/images/wunderground.png" width="220" height="30" style="vertical-align:bottom; padding-bottom: 5px;"></a></span>
+                </div>  
             </div>
         </div>
     </div>
@@ -89,7 +92,7 @@ j(document).ready(function(j) {
             var location = parsed_json['current_observation']['display_location']['full'];
             var temp_f = parsed_json['current_observation']['temp_f'];
 
-            var weath="Current temperature in ".concat(location, " is ",temp_f," degrees fahrenheit.");
+            var weath="Current temperature in ".concat(location, " is ",temp_f, "&degF.");
             document.getElementById("demo").innerHTML=weath;
         }
     });

@@ -8,6 +8,9 @@ body {
 	font-family: 'Averia Sans Libre', cursive;
 }
 
+#main {
+	height: 100%;
+}
 
 #brand {
 	height: 50%;
@@ -67,7 +70,7 @@ button{
 {
 	font-weight:bold;
 	font-size : 20px;
-	margin-top: 110px;
+	margin-top: 13%;
 }
 
 #objects ul
@@ -113,7 +116,7 @@ button{
 }
 
 .row .ribbon {
-	padding-top: 8%;
+	padding-top: 10%;
 }
 
 h5 {
@@ -146,17 +149,10 @@ h5:after
 
 #footer {
 	height: auto;
-	margin-top: 10px;
-	padding-top:10px; 
-	padding-bottom: 10px;
-	padding-left: 50px;
-	padding-right:50px;
-	background-color: #d3dee7;
+	padding-top: 10px;
+	/*background-color: #d3dee7;*/
 	clear:both;
 	text-align:left;
 	font-family: 'Averia Sans Libre', cursive;
-	color: #48a6a6;
-	-webkit-box-shadow: 0px 2px 4px #888;
-	-moz-box-shadow: 0px 2px 4px #888;
-	box-shadow: 0px 2px 4px #888;
+	background-color: #48a6a6;
 }

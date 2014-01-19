@@ -35,22 +35,28 @@
                 </div>
         </form>
         </div>
+        <div class="row">
+        <form action="index.html">
+            <button class="pull-right">Reset</button>
+        </form>
+        </div>
             <div id="footer" class="navbar navbar-fixed-bottom pull-left">
             Anna Tan, Jenna Choo, Sonya Anopa, Sally McNichols
             </div>
         </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>var j = jQuery.noConflict();</script>
         <!-- The single AngularJS include -->
         <script src="assets/angular.min.js"></script>
         <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script>-->
         <script src="assets/ui-bootstrap-tpls-0.10.0.min.js"></script>
         <script src="assets/script.js"></script>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        
     
     <script>
-    jQuery.noConflict();
-    jQuery(document).ready(function(jQuery) {
-    jQuery.ajax({
+    j(document).ready(function(j) {
+    j.ajax({
         url : "http://api.wunderground.com/api/396bab011405eb77/conditions/q/autoip.json",
         dataType : "jsonp",
         success : function(parsed_json) {
